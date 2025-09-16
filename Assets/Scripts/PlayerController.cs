@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    // Скорость движения
+     // Скорость движения
     public float Speed = 5f;
     public float JumpForce = 300f;
 
@@ -10,7 +10,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         // Движение влево-вправо
         float horizontal = Input.GetAxis("Horizontal");
-        transform.Translate(horizontal * Speed * Time.deltaTime, 0, 0);
+        transform.Translate(horizontal * Speed* Time.deltaTime, 0, 0);
 
         // Прыжок
         if (Input.GetKeyDown(KeyCode.Space))
