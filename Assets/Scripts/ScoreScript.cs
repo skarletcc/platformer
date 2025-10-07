@@ -9,17 +9,11 @@ public class ScoreScript : MonoBehaviour
     public void AddPoints(int points)
     {
         CurrentScore += points;
-        UpdateScoreText();
+        Update();
     }
-
-    private void UpdateScoreText()
-    {
-        ScoreText.text = "Очки: " + CurrentScore;
-    }
-
     void Update()
     {
         // Каждый кадр обновляем текст на экране
-        ScoreText.text = "Очки: " + CurrentScore;
+        ScoreText.text = "Монеты: " + CurrentScore + "/7";
     }
 }

@@ -11,9 +11,4 @@ public class Bouncer : MonoBehaviour
             other.GetComponent<Rigidbody>().AddForce(Vector3.up * bounceForce);
         }
     }
-
-    void Update()
-    {
-        GetComponent<Rigidbody>().AddForce(Vector3.up * bounceForce);
-    }
 }

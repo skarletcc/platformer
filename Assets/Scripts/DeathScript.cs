@@ -18,9 +18,14 @@ public class DeathScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Проверяем, что коснулся игрок (объект с тегом "Player")
         if (other.CompareTag("Player"))
         {
+            HeartScript playerHealth = other.GetComponent<HeartScript>();
+            
+            if (playerHealth != null)
+            {
+                playerHealth.RemoveHeart();
+            }
             RespawnPlayer(other.gameObject);
         }
     }
